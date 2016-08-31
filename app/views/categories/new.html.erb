@@ -1,6 +1,10 @@
-<h1 align="center">Create new category</h1>
+<h1 align="center">Create A New Category</h1>
 
 <%= render 'shared/errors', obj: @category %>
+
+<div class='row'>
+
+<div class='col-xs-12'>
 
 <%= form_for(@category, :html => {class: "form-horizontal", role: "form"}) do |f| %>
 
@@ -20,7 +24,6 @@
 
 </div>
 
-
 <div class="form-group">
 
 <div class="col-sm-offset-2 col-sm-10">
@@ -39,3 +42,6 @@
 
 </div>
 
+</div>
+
+</div>
