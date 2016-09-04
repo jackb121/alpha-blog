@@ -18,10 +18,19 @@ class CreateNewArticleTest < ActionDispatch::IntegrationTest
     assert_match @article.description, response.body
   end
   
-  test "Ensure article title and article description not blank" do
+  test "Ensure article title and article description fit requirements" do
     @article.title = " "
     assert_not @article.valid?
     @article.description = " "
     assert_not @article.valid?
+    @article.title = "aa"
+    assert_not @article.valid?
+    @article.description = "a" * 8
+    assert_not @article.valid?
+    @article.title = "a" * 50
+    assert_not @article.valid?
+    @article.description = "a" * 500
+    assert_not @article.valid?
+    
   end
 end
