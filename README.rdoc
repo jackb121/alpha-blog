@@ -1,1 +1,1 @@
-This is the repository for the first alpha-blog app for the complete rails developer course
+A basic blog style application developed for the purpose of learning the Ruby on Rails framework.
